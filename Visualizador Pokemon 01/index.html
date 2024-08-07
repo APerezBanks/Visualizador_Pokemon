@@ -9,40 +9,38 @@
 
   <body>
     <header>
-      
       <section>
-      <img src="/imagenes header/pokeball.png" class="pokeball" alt="pokeball">
-      <img src="/imagenes header/pokemon.png"  id="titulo" alt="titulo">
-      <img src="/imagenes header/pokeball.png" class="pokeball" alt="pokeball">
+        <img
+          src="/imagenes header/pokeball.png"
+          class="pokeball"
+          alt="pokeball"
+        />
+        <img src="/imagenes header/pokemon.png" id="titulo" alt="titulo" />
+        <img
+          src="/imagenes header/pokeball.png"
+          class="pokeball"
+          alt="pokeball"
+        />
       </section>
-      
-
 
       <h1>TU POKEDEX FAVORITA</h1>
-      
     </header>
-      
-      
-      
-      
-      
-    
-    
+    <main>
+      <form class="buscador">
+        <div class="input-container">
+          <input type="search" placeholder="Busca un Pokémon..." />
+          <button type="button" id="buscarBtn">Buscar</button>
+          <ul class="suggestions"></ul>
+        </div>
+      </form>
 
-    <form class="buscador">
-      <div class="input-container">
-        <input type="search" placeholder="Busca un Pokémon..." />
-        <button type="button" id="buscarBtn">Buscar</button>
-        <ul class="suggestions"></ul>
-      </div>
-    </form>
-
-    <section class="resultados">
-      <p>donde se cargan los datos ...</p>
-    </section>
-    <section class="informacionPokemon">
-      <p>informacion del pokemon</p>
-    </section>
-    <script src="script.js"></script>
+      <section class="resultados">
+        <!-- <p>donde se cargan los datos ...</p> -->
+      </section>
+      <section class="informacionPokemon">
+        <!-- <p>informacion del pokemon</p> -->
+      </section>
+      <script src="script.js"></script>
+    </main>
   </body>
 </html>

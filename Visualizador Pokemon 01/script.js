@@ -153,4 +153,3 @@ searchInput.addEventListener("input", mostrarSugerencias);
 
 // Añadir listener al botón de búsqueda
 buscarBtn.addEventListener("click", manejarBusqueda);
-git;

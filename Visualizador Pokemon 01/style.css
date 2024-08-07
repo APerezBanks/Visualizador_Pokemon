@@ -1,14 +1,33 @@
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(35, 61, 77);
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 5px rgb(254, 202, 70) dotted;
-  padding: 20px;
-  /* Añade padding interno */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+@font-face {
+  font-family: "PokemonGB-Raeo";
+  font-weight: 100;
+  src: url(/fuentes/PokemonGb-RAeo.ttf);
+}
+@font-face {
+  font-family: "SugarBomb";
+
+  src: url(/fuentes/Moltors3D-WyE8n.ttf);
+}
+
+/* /////// =========================CODIGO ALBERTO ==============/////// */
+html {
+  background-color: #fcca46;
+  height: 100%;
+}
+main {
+  background-image: url(/imagenes/fondo.jpg);
+  background-size: cover;
+
+  height: 100vh;
+  background-position: center;
+}
+
+/* animaciones pokeball */
 
 @keyframes spin {
   from {
@@ -18,6 +37,21 @@ header {
   to {
     transform: rotate(360deg);
   }
+}
+/* ------------ */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(35, 61, 77);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px rgb(254, 202, 70) dotted;
+  padding: 20px;
+  width: 100%;
+  overflow: hidden;
+  /* Añade padding interno */
 }
 
 header section {
@@ -44,41 +78,27 @@ header h1 {
   font-size: large;
   color: rgb(254, 202, 70);
   text-shadow: 2px 2px 4px #000000;
+  letter-spacing: 0.1rem;
 
   margin-top: 15px;
 
   line-height: 1.2;
 }
-@font-face {
-  font-family: "PokemonGB-Raeo";
-  font-weight: 100;
-  src: url(/fuentes/PokemonGb-RAeo.ttf);
-}
-@font-face {
-  font-family: "SugarBomb";
 
-  src: url(/fuentes/Moltors3D-WyE8n.ttf);
-}
+/* codigo Alberto fin */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  background-color: #fcca46;
-  height: 100%;
-}
-
-/* css Alex aqui debajo */
+/* =====================================css Alex aqui debajo =====================*/
 
 section.informacionPokemon {
+  border: 5px solid #e0e1dd;
+  /* background-image: url(/imagenes/pokeballAlex.png);
+  background-position: contain; */
   margin: 0 auto;
   max-width: fit-content;
-
+  color: #e0e1dd;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #a1c181;
+  background-color: #233d4d;
 }
 .topCard {
   /* border: 1px solid black; */
@@ -91,14 +111,15 @@ section.informacionPokemon {
 .topCard h2 {
   /* font-family: "SugarBomb"; */
   letter-spacing: 0.1rem;
-  color: #3b4cca;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-top: 10px;
+  font-size: 3rem;
   /* background-color: whitesmoke; */
   border-radius: 10px;
   padding-bottom: 5px;
 }
 .topCard p {
   font-family: "PokemonGB-Raeo";
-  color: rgb(255, 255, 255);
   /* border: 1px solid white; */
   padding: 10px;
 
@@ -117,6 +138,7 @@ div.imagenes {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #4fdefbeb;
+  height: 150px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 
   padding: 0.5rem;
@@ -127,10 +149,11 @@ div.imagenes {
 
 .ptarjeta {
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
+  text-shadow: #000000;
   padding: 10px;
   margin-bottom: 1rem;
-  color: #233d4d;
+
   /* border: 1px solid black; */
 
   display: grid;
@@ -144,8 +167,123 @@ div.imagenes {
   border-radius: 10px;
   padding: 0.6rem;
 
-  background-color: #619b8a;
+  background-color: #fe7f2d;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+#pEs {
+  font-size: 1.5rem;
+}
 /* hasta aqui codigo Alex */
+/* ---------------------------------Código Amanda----------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Permanent+Marker&display=swap");
+
+form {
+  display: flex;
+  padding: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 90vw;
+}
+
+input {
+  height: 70px;
+  width: 500px;
+  border-radius: 40px;
+  border: none;
+  background-color: #f8f1e077;
+  padding-left: 50px;
+  padding-right: 30px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.085);
+  font-family: "Dosis", sans-serif;
+  font-size: 25px;
+  color: #619b8a;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input:focus {
+  background-color: beige;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.221);
+}
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 92%;
+  left: 50px;
+  background-color: #619b8a;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.152);
+  z-index: 1000;
+  max-height: 200px;
+  width: 200px;
+  overflow: auto;
+  font-family: "Dosis", sans-serif;
+  font-size: 25px;
+  color: #fccb46;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.086);
+}
+
+.suggestions::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+  background: bisque;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+  background: #fcca46;
+  border-radius: 5px;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f5faf9a0;
+  border: 3px solid black;
+  color: black;
+  border-radius: 10px;
+}
+
+button {
+  min-height: 80px;
+  min-width: 80px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  background-image: url(Pokemon-Pokeball-Transparent.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  background-color: #fcca46;
+  color: #fcca46;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: azure;
+}
+
+@media (min-width: 700px) {
+  .imagenes img {
+    height: 250px;
+  }
+}
