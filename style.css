@@ -19,10 +19,12 @@ html {
   background-color: #fcca46;
   height: 100%;
 }
+
 main {
   background-image: url(/imagenes/fondo.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center center; /* Centra la imagen en ambas direcciones */
+  background-attachment: fixed;
   height: 120vh;
 }
 

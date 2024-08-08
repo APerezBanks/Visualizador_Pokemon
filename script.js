@@ -130,6 +130,13 @@ async function mostrarInformacionPokemon(nombre) {
 // Función para manejar la búsqueda ( ejemplo si esscribo pika y solo hay una opcion elije esa opcion)
 function manejarBusqueda() {
   const nombre = searchInput.value.trim();
+
+  // Verificar si el input está vacío
+  if (nombre === "") {
+    alert("No has escrito nada, escribe en el buscador un nombre de Pokemon");
+    return;
+  }
+
   const resultados = buscarPorNombre(nombre);
 
   if (resultados.length === 1) {
